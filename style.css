@@ -1,8 +1,18 @@
 html, body {
     display: block;
-    font-size: 2em;
+   
 }
 #container {
     width: 50%;
     height: 50%;
+    margin: 0 auto;
+    
+}
+#text-area {
+    width: 75%;
+    background-color: black;
+}
+.calc-button {
+    float: left;
+    width: 25%;
 }
