@@ -1,18 +1,26 @@
 html, body {
-    display: block;
+    height: 100%;
+    position: relative;
+    background-color: #B2CEDE;
+    text-align: center;
    
 }
 #container {
+    position: absolute;
+    top: 20%;
+    left: 25%;
     width: 50%;
-    height: 50%;
+    height: 100%;
     margin: 0 auto;
     
 }
 #text-area {
     width: 75%;
-    background-color: black;
+    background-color: #AD7A99;
 }
 .calc-button {
     float: left;
+    background-color: #8CDFD6;
+    height: 10%;
     width: 25%;
 }
