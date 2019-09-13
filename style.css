@@ -15,7 +15,7 @@ html, body {
     
 }
 #text-area {
-    width: 75%;
+    width: 99.7%;
     background-color: #AD7A99;
 }
 .calc-button {
@@ -23,4 +23,6 @@ html, body {
     background-color: #8CDFD6;
     height: 10%;
     width: 25%;
+    border: 1px solid white;
+    
 }
