@@ -17,6 +17,7 @@ html, body {
 #text-area {
     width: 99.7%;
     background-color: #AD7A99;
+    position: relative;
 }
 .calc-button {
     float: left;
@@ -25,4 +26,12 @@ html, body {
     width: 25%;
     border: 1px solid white;
     
+}
+#screen-area {
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    height: 50%;
+    font-size: 2em;
+    text-align: right;
 }

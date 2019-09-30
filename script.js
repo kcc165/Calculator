@@ -1,10 +1,11 @@
 const screenArea = document.querySelector("#screen-area");
 const numbers = document.querySelectorAll(".number-button");
+let textnode = document.createTextNode("");
 console.log(numbers);
 
 numbers.forEach((num) => {
     num.addEventListener("click", (e) => {
-        let textnode = document.createTextNode(e.target.firstChild.data)
+        textnode.nodeValue += e.target.firstChild.data
         screenArea.appendChild(textnode);
         console.log(e.target.firstChild.data);
     });
