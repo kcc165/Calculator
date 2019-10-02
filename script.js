@@ -1,14 +1,23 @@
 const screenArea = document.querySelector("#screen-area");
 const numbers = document.querySelectorAll(".number-button");
 const operations = document.querySelectorAll(".operation-button");
+const equalsButton = document.querySelector("#equals");
 let textnode = document.createTextNode("");
 let number1 = [];
 let number2 = [];
+let answer = [];
 let operator = "";
 
 
 numbers.forEach((num) => {
     num.addEventListener("click", (e) => {
+        if (answer.length != 0){
+            number1 = [];
+            number2 = [];
+            answer = [];
+            operator = "";
+            textnode.nodeValue = "";
+        }
         textnode.nodeValue += e.target.firstChild.data
         screenArea.appendChild(textnode);
         if (operator === ""){
@@ -34,6 +43,15 @@ operations.forEach((oper) => {
         }
     });
 });
+
+equalsButton.addEventListener("click", (e) => {
+    n1 = number1.join("");
+    n2 = number2.join("");
+    if (number1.length != 0 && number2.length != 0 && operator !== ""){
+        textnode.nodeValue = equals(parseInt(n1), parseInt(n2), operator);
+        answer.push(textnode.nodeValue);
+    }
+})
 
 
 
