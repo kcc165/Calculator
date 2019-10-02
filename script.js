@@ -33,6 +33,14 @@ numbers.forEach((num) => {
 
 operations.forEach((oper) => {
     oper.addEventListener("click", (e) => {
+        if (answer.length != 0){
+            number1 = answer.toString().split("");
+            textnode.nodeValue = answer.toString();
+            number2 = [];
+            answer = [];
+            operator = "";
+            
+        }
         if (number1 !== ""){
             if (operator === ""){
                 textnode.nodeValue += ` ${e.target.firstChild.data} `;
@@ -48,7 +56,7 @@ equalsButton.addEventListener("click", (e) => {
     n1 = number1.join("");
     n2 = number2.join("");
     if (number1.length != 0 && number2.length != 0 && operator !== ""){
-        textnode.nodeValue = equals(parseInt(n1), parseInt(n2), operator);
+        textnode.nodeValue = equals(parseFloat(n1), parseFloat(n2), operator);
         answer.push(textnode.nodeValue);
     }
 })
