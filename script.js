@@ -25,8 +25,10 @@ numbers.forEach((num) => {
 operations.forEach((oper) => {
     oper.addEventListener("click", (e) => {
         if (number1 !== ""){
-            textnode.nodeValue += ` ${e.target.firstChild.data} `;
-            operator = e.target.id;
+            if (operator === ""){
+                textnode.nodeValue += ` ${e.target.firstChild.data} `;
+                operator = e.target.id;
+            }
             
             
         }
